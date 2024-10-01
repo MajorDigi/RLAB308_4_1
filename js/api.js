@@ -1,7 +1,7 @@
 // Set default configuration for Axios
-const apiKey = 'live_gX1HxvSUmfxYLKeNjJ6xdzgpPoT05X0HNM3HEWVv79s5Iik7X0f50rwlMB43RVY3';
+const apiKey = 'live_8tvp85ZBQdhx18JPtqalIMIivvfethkkPIHUwtF0YgbipoeqUdOPVxP2D1XRaw0f';
 const axiosInstance = axios.create({
-    baseURL: 'https://api.thedogapi.com/v1/',
+    baseURL:  'https://api.thecatapi.com/v1',
     headers: { 'x-api-key': apiKey }
 });
 
