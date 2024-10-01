@@ -26,30 +26,30 @@ axiosInstance.interceptors.response.use(response => {
     return Promise.reject(error);
 });
 
-// Function to get random dog image
-export async function getRandomDog() {
+// Function to get random cat image
+export async function getRandomCat() {
     try {
-        console.log('Fetching random dog...');
+        console.log('Fetching random cat...');
         const response = await axiosInstance.get('images/search');
-        console.log('Random dog fetched:', response.data);
+        console.log('Random cat fetched:', response.data);
         return response.data[0];
     } catch (error) {
-        console.error('Error fetching random dog:', error);
+        console.error('Error fetching random cat:', error);
         throw error;
     }
 }
 
-// Function to get 10 random dog images
-export async function getTenDogs() {
+// Function to get 10 random cat images
+export async function getTenCats() {
     try {
-        console.log('Fetching 10 random dogs...');
+        console.log('Fetching 10 random cats...');
         const response = await axiosInstance.get('images/search', {
             params: { limit: 10 }
         });
-        console.log('10 random dogs fetched:', response.data);
+        console.log('10 random cats fetched:', response.data);
         return response.data;
     } catch (error) {
-        console.error('Error fetching 10 random dogs:', error);
+        console.error('Error fetching 10 random cats:', error);
         throw error;
     }
 }

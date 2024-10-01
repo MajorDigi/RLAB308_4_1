@@ -1,42 +1,42 @@
-import { getRandomDog, getTenDogs } from './api.js';
+import { getRandomCat, getTenCats } from './api.js';
 import { updateProgress } from './utils.js';
 
-// Event handler for getting a random dog image
-document.getElementById('getRandomDogBtn').addEventListener('click', async () => {
-    console.log('Get Random Dog button clicked');
+// Event handler for getting a random cat image
+document.getElementById('getRandomCatBtn').addEventListener('click', async () => {
+    console.log('Get Random Cat button clicked');
     try {
-        const dog = await getRandomDog();
-        console.log('Displaying random dog:', dog);
-        displayDog([dog]);
+        const cat = await getRandomCat();
+        console.log('Displaying random cat:', cat);
+        displayCat([cat]);
     } catch (error) {
-        console.error('Error fetching random dog:', error);
+        console.error('Error fetching random cat:', error);
     }
 });
 
-// Event handler for getting 10 random dog images
-document.getElementById('getTenDogsBtn').addEventListener('click', async () => {
-    console.log('Get 10 Dogs button clicked');
+// Event handler for getting 10 random cat images
+document.getElementById('getTenCatsBtn').addEventListener('click', async () => {
+    console.log('Get 10 Cats button clicked');
     try {
-        const dogs = await getTenDogs();
-        console.log('Displaying 10 dogs:', dogs);
-        displayDog(dogs);
+        const cats = await getTenCats();
+        console.log('Displaying 10 cats:', cats);
+        displayCat(cats);
     } catch (error) {
-        console.error('Error fetching 10 random dogs:', error);
+        console.error('Error fetching 10 random cats:', error);
     }
 });
 
-// Function to display dog images
-function displayDog(dogs) {
-    const dogContainer = document.getElementById('dogContainer');
-    dogContainer.innerHTML = ''; // Clear existing content
+// Function to display cat images
+function displayCat(cats) {
+    const catContainer = document.getElementById('catContainer');
+    catContainer.innerHTML = ''; // Clear existing content
 
-    dogs.forEach(dog => {
+    cats.forEach(cat => {
         const imgElement = document.createElement('img');
-        imgElement.src = dog.url;
-        imgElement.alt = 'Dog Image';
-        imgElement.className = 'dog-item';
-        dogContainer.appendChild(imgElement);
-        console.log('Dog image added to container:', dog.url);
+        imgElement.src = cat.url;
+        imgElement.alt = 'Cat Image';
+        imgElement.className = 'cat-item';
+        catContainer.appendChild(imgElement);
+        console.log('Cat image added to container:', cat.url);
     });
 }
 

@@ -1,7 +1,7 @@
 # RLAB308_4_1
 
 ## Project Overview
-This project is a Dog API integration that fetches and displays dog images using The Dog API. It includes HTML, CSS, and JavaScript files to handle the API requests and user interface.
+This project is a Cat API integration that fetches and displays cat images using The Cat API. It includes HTML, CSS, and JavaScript files to handle the API requests and user interface.
 
 ## Files
 - `index.html`: Main HTML file

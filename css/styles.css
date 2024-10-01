@@ -16,13 +16,13 @@ button {
     margin: 10px;
 }
 
-#dogContainer {
+#catContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.dog-item {
+.cat-item {
     max-height: 200px;
 }
 
